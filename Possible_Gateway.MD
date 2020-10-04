@@ -32,4 +32,4 @@ Client must send this every ``hb_int`` milliseconds.
 }
 ```
 
-If Function Code 110 isn't sent back by the client, presume connection failure and close Websocket.
+If Function Code 110 isn't sent back to the client by the server, presume connection failure and close Websocket.
