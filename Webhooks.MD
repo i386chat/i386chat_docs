@@ -16,6 +16,7 @@ Presuming your instance is on `localhost` and you are using API version 2 - to s
    "content": "Webhook message would go here.",
    "nonce": "<random INTEGER, not string>"
 }
+```
 
 Please note that you must have your Authorization header set properly, more information can be found in the Authorization documentation.
 
