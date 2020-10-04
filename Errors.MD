@@ -1,11 +1,11 @@
 # Errors
 
-Errors are usually returned as a 400 BAD REQUEST, and are structured like such:
+Errors are usually returned as part of a 400 BAD REQUEST, and are structured like such:
 
 ```json
 {
-    code: 1,
-    error: "Error body"
+    "code": 1,
+    "error": "Error body"
 }
 ```
 
