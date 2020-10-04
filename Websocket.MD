@@ -19,8 +19,8 @@ Client must send **Message_Send** event.
 ### Sample Body
 ```json
 {
-    "content": "<text goes here>"
-    "nonce": <randomly generated integer>
+    "content": "<text goes here>",
+    "nonce": "<randomly generated INTEGER, not a string>"
 }
 ```
 
@@ -37,6 +37,6 @@ Client must send **Message_Send** event.
       "bio": "I am an i386chat user!"
    },
    "content": "I sent a message.",
-   "nonce": <randomly generated string from other client's Message_Send event>
+   "nonce": "<randomly generated INTEGER (not string) from other client's Message_Send event>"
 }
 ```
