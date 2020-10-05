@@ -16,6 +16,8 @@ t | String | Event name for this payload.
 
 Note that `s` and `t` values will be ignored if the Function Code is not 120.
 
+Payloads will be limited to a maximum of **4096** bytes - going over this will result in connection termination.
+
 ## Function Codes
 
 ### Function Code 100 - Introduce and Configure
