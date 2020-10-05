@@ -5,6 +5,17 @@
 - Upon connection, client will immedietly receive Function Code 100 - containing what the server expects from the client (eg. heartbeat interval)
 - Client is expected to send a heartbeat over the Websocket under Function Code 110, the Websocket may send this Function Code to the client, in which case the client must respond as if it is sending a regular heartbeat.
 
+## Payload Structure
+
+Field | Data Type | Description
+------|-----------|------------
+f | Integer | Function Code for this payload
+cnf | JSON, String, Integer | Event data.
+s | Integer | Sequence number for session resumption, might be scrapped.
+t | String | Event name for this payload.
+
+Note that `s` and `t` values will be ignored if the Function Code is not 120.
+
 ## Function Codes
 
 ### Function Code 100 - Introduce and Configure
