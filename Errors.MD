@@ -32,7 +32,7 @@ SQLite failure.
 ### Code 544541
 Tea.
 
-### Gateway-only Error Codes
+## Gateway-only Error Codes
 
 ### Code 4000
 Disconnected from gateway - payload over 4096 bytes.
