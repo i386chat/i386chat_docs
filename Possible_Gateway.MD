@@ -104,7 +104,8 @@ Server sends this after the client identifies itself with Function Code 110.
   "f": 140,
   "cnf": {
     "v": 6,
-    "session_id": 9683494578353
+    "session_id": 9683494578353,
+    "enc_key": "fffis-dfsdf-eg4g4g-5g3gg434-g34g34g-34gjrgrj9gj"
   }
 }
 ```
@@ -114,6 +115,7 @@ Server sends this after the client identifies itself with Function Code 110.
 ------|---------|-----------
 v | Integer | Gateway API version.
 session_id | Integer | Unique Session Identifier for communication management/resumption.
+enc_key | String | If End to End Encryption ever gets implemented, this is the client's encryption key. Client **must** encode sensitive information such as contents of messages, otherwise requests will be marked as invalid.
 
 ## Events
 
