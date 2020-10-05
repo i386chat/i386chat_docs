@@ -47,7 +47,7 @@ Client-only code. Should send this before doing ANYTHING ELSE on the gateway.
 ```json
 {
   "f": 110,
-  "cnf: {
+  "cnf": {
     "token": "token_here"
   }
 }
