@@ -61,3 +61,13 @@ Client sends this when it wishes to interact with the server.
 }
 ```
 
+## Events
+
+|Event Name|Description|
+-----------|------------
+MESSAGE_CREATE | Client creating a message.
+MESSAGE_DELETE | Client deleting a message.
+START_TYPING | Client has started typing.
+SYSTEM_BAN_ADD | Client is trying to add a system-wide ban.
+CHANNEL_ADD | Client is creating a new channel.
+CHANNEL_MOVE | Client is moving into another channel.
