@@ -83,3 +83,7 @@ START_TYPING | Client has started typing.
 SYSTEM_BAN_ADD | Client is trying to add a system-wide ban.
 CHANNEL_ADD | Client is creating a new channel.
 CHANNEL_MOVE | Client is moving into another channel.
+ROOM_USER_ADD | Other client is joining this channel
+ROOM_USER_REMOVE | Other client is leaving this channel.
+GATEWAY_DOWN | Gateway is going down - client should prepare for Websocket disconnection.
+
