@@ -33,3 +33,18 @@ Client must send this every ``hb_int`` milliseconds.
 ```
 
 If Function Code 110 isn't sent back to the client by the server, presume connection failure and close Websocket.
+
+### Function Code 120 - Execute
+
+Client sends this when it wishes to interact with the server.
+
+#### Body
+```json
+{
+  "f": 120,
+  "cnf": {},
+  "s": 21,
+  "e": "EVENT_HERE"
+}
+```
+
