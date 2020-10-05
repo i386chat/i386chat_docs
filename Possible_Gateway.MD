@@ -34,6 +34,11 @@ Only the server can send this function code - sent as soon as client starts init
 }
 ```
 
+##### "Configuration" Structure
+Field | Data Type | Description
+------|-----------|------------
+hb_int | Integer | Interval in milliseconds that the client should send a heartbeat to the server.
+
 ### Function Code 110 - Heartbeat
 
 Client must send this every ``hb_int`` milliseconds.
@@ -46,6 +51,10 @@ Client must send this every ``hb_int`` milliseconds.
 ```
 
 If Function Code 110 isn't sent back to the client by the server, presume connection failure and close Websocket.
+
+##### "Configuration" Structure
+
+No parameters are sent on a heartbeat Function Code.
 
 ### Function Code 120 - Execute
 
@@ -60,6 +69,9 @@ Client sends this when it wishes to interact with the server.
   "e": "EVENT_HERE"
 }
 ```
+#### "Configuration" Structure
+
+The structure of the configuration depends on the event that is being sent to the server. See [Events](https://github.com/i386chat/i386chat_docs/blob/main/Possible_Gateway.MD#events).
 
 ## Events
 
