@@ -117,6 +117,27 @@ v | Integer | Gateway API version.
 session_id | Integer | Unique Session Identifier for communication management/resumption.
 enc_key | String | If End to End Encryption ever gets implemented, this is the client's encryption key. Client **must** encode sensitive information such as contents of messages, otherwise requests will be marked as invalid.
 
+## Function Code 150 - Error
+
+Server sends this in the event that an error occurs.
+
+#### Body
+```json
+{
+  "f": 150,
+  "cnf": {
+    "c": 4001,
+    "d": true
+  }
+}
+```
+
+#### Configuration Structure
+|Field|Data Type|Description
+------|---------|-----------
+c | Integer | Error code.
+d | Boolean | True if client is being disconnected due to the error, or false if this is non-fatal.
+
 ## Events
 
 |Event Name|Description|
