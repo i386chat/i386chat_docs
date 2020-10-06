@@ -144,24 +144,24 @@ d | Boolean | True if client is being disconnected due to the error, or false if
 
 These are events sent to the Client by the Server.
 
-|Event Name|Description|
------------|------------
-MESSAGE_CREATE | New message.
-MESSAGE_DELETE | Message deletion.
-START_TYPING | Another client has started typing.
-ROOM_USER_ADD | Other client is joining this channel
-ROOM_USER_REMOVE | Other client is leaving this channel.
-GATEWAY_DOWN | Gateway is going down - client should prepare for Websocket disconnection.
+|Event Name|Description|Configuration Structure|
+-----------|-----------|-----------------------|
+MESSAGE_CREATE | New message. | ```json{ "user": <User Object>, "content": "Message Content..."}```
+MESSAGE_DELETE | Message deletion. | ```json{ "messageID": 3858283757282853 }```
+START_TYPING | Another client has started typing. | ```json{ "user": <User Object>}```
+ROOM_USER_ADD | Other client is joining this channel | ```json{ "user": <User Object>}```
+ROOM_USER_REMOVE | Other client is leaving this channel. | ```json{ "user": <User Object>}```
+GATEWAY_DOWN | Gateway is going down - client should prepare for Websocket disconnection. | No parameters.
 
 ### Client Events
 
 These are events sent to the Server by the Client.
 
-|Event Name|Description|
------------|------------
-MESSAGE_CREATE | Client creating a message.
-MESSAGE_DELETE | Client deleting a message.
-START_TYPING | Client has started typing.
+|Event Name|Description|Configuration Structure|
+-----------|-----------|-----------------------|
+MESSAGE_CREATE | Client creating a message. | ```json{ "content": "This is message."}```
+MESSAGE_DELETE | Client deleting a message. | ```json{ "messageID": 3858283757282853 }```
+START_TYPING | Client has started typing. | No parameters.
 SYSTEM_BAN_ADD | Client is trying to add a system-wide ban.
 CHANNEL_ADD | Client is creating a new channel.
 CHANNEL_MOVE | Client is moving into another channel.
