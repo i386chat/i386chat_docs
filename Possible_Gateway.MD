@@ -140,6 +140,23 @@ d | Boolean | True if client is being disconnected due to the error, or false if
 
 ## Events
 
+### Server Events
+
+These are events sent to the Client by the Server.
+
+|Event Name|Description|
+-----------|------------
+MESSAGE_CREATE | New message.
+MESSAGE_DELETE | Message deletion.
+START_TYPING | Another client has started typing.
+ROOM_USER_ADD | Other client is joining this channel
+ROOM_USER_REMOVE | Other client is leaving this channel.
+GATEWAY_DOWN | Gateway is going down - client should prepare for Websocket disconnection.
+
+### Client Events
+
+These are events sent to the Server by the Client.
+
 |Event Name|Description|
 -----------|------------
 MESSAGE_CREATE | Client creating a message.
@@ -148,7 +165,7 @@ START_TYPING | Client has started typing.
 SYSTEM_BAN_ADD | Client is trying to add a system-wide ban.
 CHANNEL_ADD | Client is creating a new channel.
 CHANNEL_MOVE | Client is moving into another channel.
-ROOM_USER_ADD | Other client is joining this channel
-ROOM_USER_REMOVE | Other client is leaving this channel.
-GATEWAY_DOWN | Gateway is going down - client should prepare for Websocket disconnection.
+ROOM_USER_ADD | This Client is joining this channel
+ROOM_USER_REMOVE | This Client is leaving this channel.
+
 
