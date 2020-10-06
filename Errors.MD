@@ -45,3 +45,6 @@ Disconnected from gateway - ratelimited.
 
 ### Code 4003
 Disconnected from gateway - gateway is shutting down.
+
+### Code 4004
+Invalid or malformed gateway event sent.
