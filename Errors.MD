@@ -48,3 +48,6 @@ Disconnected from gateway - gateway is shutting down.
 
 ### Code 4004
 Invalid or malformed gateway event sent.
+
+### Code 4005
+Tried to communicate with Server without identifying with Gateway.
