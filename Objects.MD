@@ -6,7 +6,7 @@ i386chat will refer to certain arrays as Objects, below is information about eac
 Must be signed as a JWT with the server's secret. Identifies the user.
 ```json
 {
-  "type": "user"
+  "type": "user",
   "id": 6982582592583503353
 }
 ```
