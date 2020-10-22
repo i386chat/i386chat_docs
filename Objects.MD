@@ -2,6 +2,21 @@
 
 i386chat will refer to certain arrays as Objects, below is information about each object and what it should contain.
 
+## Token Object
+Must be signed as a JWT with the server's secret. Identifies the user.
+```json
+{
+  "type": "user"
+  "id": 6982582592583503353
+}
+```
+
+### Structure Information
+|Name|Data Type|Description|
+-----|---------|-----------|
+type | String | User's type (are they a user, or a bot?)
+id | Integer | User's ID (compound key of Users database, along with UUID)
+
 ## User Object
 ```json
 {
