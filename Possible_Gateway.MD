@@ -152,6 +152,7 @@ START_TYPING | Another client has started typing. | ```json{ "user": <User Objec
 ROOM_USER_ADD | Other client is joining this channel | ```json{ "user": <User Object>}```
 ROOM_USER_REMOVE | Other client is leaving this channel. | ```json{ "user": <User Object>}```
 GATEWAY_DOWN | Gateway is going down - client should prepare for Websocket disconnection. | No parameters.
+SERVER_MESSAGE | System message. | ```json{ "content": "message content goes here"}```
 
 ### Client Events
 
